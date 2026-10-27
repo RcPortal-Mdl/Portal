@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal RC Mirandela</title>
+<meta name="apple-mobile-web-app-title" content="Portal RC Mirandela">
+<meta name="application-name" content="Portal RC Mirandela">
+<meta name="theme-color" content="#17458F">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<script>
+/* ENDEREÇO DO PORTAL — se o endereço da aplicação mudar, altere só esta linha */
+var DESTINO = 'https://tinyurl.com/Rcmirandela-Portal';
+/* Aberto pelo ícone do ecrã principal (?a=1): segue diretamente para o portal */
+if (/[?&]a=1\b/.test(location.search)) { location.replace(DESTINO); }
+</script>
+<style>
+:root{--azul:#17458F;--ouro:#F7A81B;--fundo:#f4f6fa;--txt:#1d2433;--mut:#5a6270}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--fundo);color:var(--txt);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+main{background:#fff;max-width:460px;width:100%;border-radius:12px;border-top:5px solid var(--ouro);box-shadow:0 6px 24px rgba(0,0,0,.08);padding:28px 22px;text-align:center}
+img.logo{max-width:100%;height:auto}
+a.entrar{display:block;margin:24px 0 8px;background:var(--azul);color:#fff;text-decoration:none;font-size:18px;font-weight:bold;padding:14px;border-radius:8px}
+h2{font-family:Georgia,serif;color:var(--azul);font-size:17px;margin:26px 0 8px}
+ol{text-align:left;font-size:14px;line-height:1.5;padding-left:20px;margin:6px 0}
+p.mut{color:var(--mut);font-size:12px}
+</style>
+</head>
+<body>
+<main>
+<img class="logo" src="logotipo.png" alt="Rotary Club de Mirandela · Portal do Companheiro">
+<a class="entrar" id="entrar" href="#">Entrar no Portal</a>
+<h2>Pôr o portal no ecrã do telemóvel</h2>
+<p><b>iPhone (Safari):</b></p>
+<ol><li>Toque no botão <b>Partilhar</b> (quadrado com seta para cima).</li><li>Escolha <b>Adicionar ao ecrã principal</b>.</li><li>Toque em <b>Adicionar</b>.</li></ol>
+<p><b>Android (Chrome):</b></p>
+<ol><li>Toque no menu <b>⋮</b> (canto superior direito).</li><li>Escolha <b>Adicionar ao ecrã principal</b> (ou <b>Instalar</b>).</li><li>Confirme.</li></ol>
+<p class="mut">O ícone com o símbolo do clube abre diretamente o Portal do Companheiro.<br>Rotary Club de Mirandela · Distrito 1970</p>
+</main>
+<script>
+document.getElementById('entrar').href = DESTINO;
+/* Guarda «?a=1» no endereço desta página: é este endereço que o telemóvel grava no atalho */
+try { if (!/[?&]a=1\b/.test(location.search)) history.replaceState(null, '', location.pathname + '?a=1'); } catch (e) {}
+</script>
+</body>
+</html>
+
+{
+  "name": "Portal do Companheiro · Rotary Club de Mirandela",
+  "short_name": "Portal RC Mirandela",
+  "start_url": "./?a=1",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#17458F",
+  "theme_color": "#17458F",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
