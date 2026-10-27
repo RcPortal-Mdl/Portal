@@ -1,0 +1,13 @@
+{
+  "name": "Portal do Companheiro · Rotary Club de Mirandela",
+  "short_name": "Portal RC Mirandela",
+  "start_url": "./?a=1",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#17458F",
+  "theme_color": "#17458F",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
